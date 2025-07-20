@@ -2,7 +2,7 @@
 import React from "react";
 import { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import * as MdIcons from "react-icons/md";
 import { FaAngleRight, FaArrowUpLong, FaAngleDown } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
