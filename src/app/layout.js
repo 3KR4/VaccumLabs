@@ -20,13 +20,25 @@ export default function RootLayout({ children }) {
   );
 }
 
+const shouldShowTopPanner = () => {
+  const closedUntil = localStorage.getItem("topPannerClosedUntil");
+
+  if (!closedUntil) return true; // لم يتم إغلاقها من قبل، اعرضها
+
+  const now = new Date();
+  const closedDate = new Date(closedUntil);
+
+  return now > closedDate; // هل مرّ الأسبوع؟ لو آه، اعرضها
+};
+
 function LayoutContent({ children }) {
   const { screenSize, pathname } = useContext(fetchingContext);
 
   return (
     <html lang="en">
       <body>
-        {(pathname.includes("home") || pathname === "/") && <TopPanner />}
+        {(pathname.includes("home") || pathname === "/") &&
+          shouldShowTopPanner() && <TopPanner />}
         <Header />
         {children}
         <Footer />

@@ -108,12 +108,7 @@ header .routs-menu {
   visibility: hidden;
   transition: 0.3s;
 }
-header:has(nav li:hover) .routs-menu,
-header .routs-menu:hover {
-  visibility: visible;
-  z-index: 1;
-  opacity: 1;
-}
+
 header .routs-menu .container {
   align-items: unset;
   gap: 106px;
@@ -142,13 +137,13 @@ header .routs-menu .container > div ul {
   flex-direction: column;
   gap: 20px;
 }
-header .routs-menu .container > div li {
+header .routs-menu .container > div a {
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
 }
-header .routs-menu .container > div li:hover {
+header .routs-menu .container > div a:hover {
   color: var(--main-color);
 }
 header .routs-menu .container.wrap {
@@ -299,6 +294,7 @@ header .routs-menu .holder .right .hold button:hover {
     transition: 0.5s;
     opacity: 0;
     right: -280px;
+    overflow: auto;
   }
   header .container > .holder.active {
     right: 0;
@@ -380,6 +376,14 @@ header .routs-menu .holder .right .hold button:hover {
     margin-top: 12px;
   }
 }
+@media (min-width: 786px) {
+  header:has(nav li:hover) .routs-menu,
+  header .routs-menu:hover {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+  }
+}
 @media (max-width: 786px) {
   .top-panner p {
     text-align: center;
@@ -387,5 +391,11 @@ header .routs-menu .holder .right .hold button:hover {
   header .container > .holder {
     width: 90%;
     right: calc(-100%);
+  }
+  header:has(nav li:hover) .routs-menu,
+  header .routs-menu:hover {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
   }
 }

@@ -211,14 +211,16 @@ function Header() {
                       <div key={index}>
                         <h4>
                           <Icon />
-                          {dept.name}
+                          <Link href={`/`}>{dept.name}</Link>
                           {activeNav > 1 && (
                             <FaAngleRight className="arrow-right" />
                           )}
                         </h4>
                         <ul>
                           {dept.categories?.map((cat, idx) => (
-                            <li key={idx}>{cat}</li>
+                            <Link href={`/`} key={idx}>
+                              {cat}
+                            </Link>
                           ))}
                         </ul>
                       </div>
