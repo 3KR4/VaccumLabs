@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --body-color: #ffffff;
+  --main-color: #e72076;
+  --hover-color: #a71755;
+  --second-color: #20323f;
+  --title-color: #20323f;
+  --section-color: #f7f7f7;
+  --border-color: #eceae5;
+  --border-color2: #d2d6d9;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--body-color);
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+::-moz-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+::-moz-scrollbar-track {
+  background: transparent;
+}
+::-moz-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+::-ms-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+::-ms-scrollbar-track {
+  background: transparent;
+}
+::-ms-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+svg,
+a,
+pre,
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--title-color);
+}
+
+svg {
+  transition: 0.3s;
+  cursor: pointer;
+}
+p,
+pre {
+  color: var(--paragraph-color);
+  white-space: pre-wrap;
+  font-size: 15px;
+  font-family: "Rubik";
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+hr {
+  background: #dddddd;
+  height: 1px;
+  border: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--title-color);
+  background: transparent;
+  font-family: "Rubik";
+}
+input:-webkit-autofill {
+  background-color: transparent !important;
+  color: var(--title-color) !important;
+  font-weight: normal !important; /* or whatever you want */
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Rubik" !important;
+  transition: 0.3s;
+}
+button:has(.lds-dual-ring) {
+  transition: color 0.3s, background-color 0.3s;
+}
+a {
+  transition: 0.3s;
+}
+.resetPosition {
+  position: relative !important;
+  width: unset !important;
+  height: unset !important;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 800px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.main-button {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 17px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+@media (min-width: 1700px) {
+}
+@media (max-width: 1600px) {
+}
+@media (max-width: 1500px) {
+}
+@media (max-width: 1300px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1100px) {
+}
+@media (max-width: 992px) {
+}
+@media (min-width: 786px) {
+}
+@media (max-width: 786px) {
+}

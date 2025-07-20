@@ -1,0 +1,31 @@
+{
+  "name": "vacuumlab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.2",
+    "@mui/lab": "^7.0.0-beta.11",
+    "@mui/material": "^7.0.2",
+    "@mui/utils": "^7.0.2",
+    "axios": "^1.8.4",
+    "lucide": "^0.469.0",
+    "lucide-react": "^0.477.0",
+    "react-hook-form": "^7.54.2",
+    "react-icons": "^5.4.0",
+    "react-paginate": "^8.3.0",
+    "swiper": "^11.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "15.4.2",
+    "@eslint/eslintrc": "^3"
+  }
+}

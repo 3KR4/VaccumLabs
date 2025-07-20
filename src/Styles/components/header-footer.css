@@ -1,0 +1,391 @@
+/*! TOP PANNER */
+.top-panner {
+  background: var(--main-color);
+  padding: 18px 0;
+}
+.top-panner .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-panner p {
+  font-size: 16px;
+  color: white;
+}
+.top-panner a {
+  font-size: 16px;
+  color: white;
+  font-weight: 700 !important;
+  text-decoration: underline;
+}
+
+/*! HEADER */
+header {
+  position: relative;
+  border-bottom: 1.5px solid var(--border-color);
+}
+header .container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  cursor: unset;
+}
+header .logo img {
+  width: 195px !important;
+  cursor: pointer;
+}
+header .container > .holder {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav > ul > li {
+  padding: 36px 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  position: relative;
+}
+
+header nav > ul > li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: var(--main-color);
+  transition: 0.3s;
+}
+header nav ul li:hover,
+header nav ul li.active {
+  color: var(--main-color);
+}
+header nav ul li svg {
+  transform: translateY(-1px);
+}
+header nav ul li:hover svg,
+header nav ul li.active svg {
+  transform: rotate(180deg);
+  color: var(--main-color);
+}
+header nav ul li:hover::before,
+header nav ul li.active::before {
+  width: 100%;
+}
+header button:hover {
+  background-color: var(--hover-color);
+}
+
+header .routs-menu {
+  position: absolute;
+  display: flex;
+  top: 90px;
+  background: var(--section-color);
+  width: 100%;
+  left: 0;
+  padding: 45px 0;
+  justify-content: center;
+  flex-direction: column;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+header:has(nav li:hover) .routs-menu,
+header .routs-menu:hover {
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+}
+header .routs-menu .container {
+  align-items: unset;
+  gap: 106px;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 45px;
+}
+header .routs-menu .container > div h4 {
+  border-bottom: 2px solid #dcdcdc;
+  padding-bottom: 11px;
+  margin-bottom: 18px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: 0s;
+}
+header .routs-menu .container > div h4 svg {
+  color: var(--main-color);
+  font-size: 23px;
+}
+header .routs-menu .container > div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+header .routs-menu .container > div li {
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .routs-menu .container > div li:hover {
+  color: var(--main-color);
+}
+header .routs-menu .container.wrap {
+  gap: 50px;
+  justify-content: flex-start;
+}
+header .routs-menu .container .row-h4s {
+  display: flex;
+  gap: 50px;
+  border-bottom: 1px solid var(--border-color2);
+  padding-bottom: 30px;
+}
+header .routs-menu .container.wrap h4 {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+header .routs-menu .container.wrap > div h4 {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+header .routs-menu .container.wrap > div svg.arrow-right {
+  font-size: 13px;
+  transform: translateY(-1px);
+  color: var(--title-color);
+}
+
+header .routs-menu .holder {
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-top: 33px;
+  padding-top: 24px;
+  border-top: 2px solid var(--border-color2);
+}
+header .routs-menu .holder > * {
+  width: 50%;
+}
+header .routs-menu .holder .left .top {
+  margin-bottom: 16px;
+  padding: 0 6px;
+  display: flex;
+  justify-content: space-between;
+}
+header .routs-menu .holder .left .top h4 {
+  all: unset;
+  font-size: 15px;
+  color: var(--title-color);
+}
+header .routs-menu .holder .left .top a {
+  text-decoration: underline;
+}
+header .routs-menu .holder .left .top a:hover {
+  color: var(--main-color);
+  font-weight: 500;
+}
+header .routs-menu .holder .left .row {
+  display: flex;
+  gap: 12px;
+}
+header .routs-menu .holder .left .row .card {
+  position: relative;
+  background: var(--main-color);
+  height: 175px;
+  border-radius: 19px;
+  overflow: hidden;
+  cursor: pointer;
+}
+header .routs-menu .holder .left .row .card:hover svg {
+  transform: translateY(-6px) translateX(2px) rotate(45deg);
+}
+header .routs-menu .holder .left .row .card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+header .routs-menu .holder .left .row .card h5 {
+  position: absolute;
+  color: white;
+  font-weight: 500;
+  left: 18px;
+  font-size: 15px;
+  bottom: 20px;
+}
+header .routs-menu .holder .left .row .card svg {
+  position: absolute;
+  right: 15px;
+  top: 19px;
+  color: white;
+  font-size: 18px;
+  transform: rotate(45deg);
+}
+header .routs-menu .holder .right .hold {
+  display: flex;
+  justify-content: space-between;
+}
+header .routs-menu .holder .right .hold .colomn h4 {
+  all: unset;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: flex;
+}
+header .routs-menu .holder .right .hold .colomn h5 {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #868686;
+}
+header .routs-menu .holder .right .hold button {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--title-color);
+  border: 1px solid var(--title-color);
+  border-radius: 9px;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+header .routs-menu .holder .right .hold button:hover {
+  background: #e7e8e9;
+}
+
+@media (min-width: 1700px) {
+}
+@media (max-width: 1600px) {
+}
+@media (max-width: 1500px) {
+}
+@media (max-width: 1300px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1100px) {
+}
+@media (max-width: 992px) {
+  header .container {
+    padding: 12px;
+  }
+  header .container > .holder {
+    position: fixed;
+    border-left: 2px solid var(--border-color);
+    background: var(--body-color);
+    flex-direction: column;
+    height: 100%;
+    top: 0;
+    width: 270px;
+    gap: 8px;
+    transition: 0.5s;
+    opacity: 0;
+    right: -280px;
+  }
+  header .container > .holder.active {
+    right: 0;
+    opacity: 1;
+  }
+  header .menu-ico {
+    font-size: 35px;
+  }
+  header nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  header nav .top {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 17px 0 5px;
+    align-items: center;
+  }
+  header nav .top .logo img {
+    width: 160px !important;
+  }
+  header nav .top .menu-ico-close {
+    font-size: 30px;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav > ul > li {
+    justify-content: space-between;
+    padding: 25px 23px;
+  }
+  header nav > ul > li {
+    width: 100%;
+  }
+  header nav > ul > li::before {
+    left: 0;
+    transform: translateX(0);
+  }
+  header .main-button {
+    width: 90%;
+  }
+  header .routs-menu {
+    padding: 10px 0;
+  }
+  header .routs-menu .container {
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  header .routs-menu .container {
+    width: 100%;
+  }
+  header .routs-menu .holder > * {
+    width: 100%;
+  }
+  header .routs-menu .holder .left .top {
+    margin-bottom: 11px;
+  }
+  header .routs-menu .holder .left .row,
+  header .routs-menu .holder .right .hold {
+    flex-direction: column;
+  }
+  header .routs-menu .holder .left .row .card {
+    width: 100%;
+    height: 130px;
+    border-radius: 12px;
+  }
+  header .routs-menu .holder .left .row .card img {
+    max-width: 100% !important;
+  }
+  header .routs-menu .holder .right .hold .colomn h4 {
+    margin-bottom: 11px;
+  }
+  header .routs-menu .holder .right .hold button {
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 786px) {
+  .top-panner p {
+    text-align: center;
+  }
+  header .container > .holder {
+    width: 90%;
+    right: calc(-100%);
+  }
+}
