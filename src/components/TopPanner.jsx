@@ -21,12 +21,15 @@ function TopPanner() {
             style={{ color: `white`, fontSize: `39px` }}
             onClick={() => {
               setRender(false);
-              const oneWeekLater = new Date();
-              oneWeekLater.setDate(oneWeekLater.getDate() + 7); // أسبوع من الآن
-              localStorage.setItem(
-                "topPannerClosedUntil",
-                oneWeekLater.toISOString()
-              );
+
+              if (typeof window !== "undefined") {
+                const oneWeekLater = new Date();
+                oneWeekLater.setDate(oneWeekLater.getDate() + 7);
+                localStorage.setItem(
+                  "topPannerClosedUntil",
+                  oneWeekLater.toISOString()
+                );
+              }
             }}
           />
         )}

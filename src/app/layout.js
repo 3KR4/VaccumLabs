@@ -21,14 +21,16 @@ export default function RootLayout({ children }) {
 }
 
 const shouldShowTopPanner = () => {
+  if (typeof window === "undefined") return false; // ممنوع التنفيذ على السيرفر
+
   const closedUntil = localStorage.getItem("topPannerClosedUntil");
 
-  if (!closedUntil) return true; // لم يتم إغلاقها من قبل، اعرضها
+  if (!closedUntil) return true;
 
   const now = new Date();
   const closedDate = new Date(closedUntil);
 
-  return now > closedDate; // هل مرّ الأسبوع؟ لو آه، اعرضها
+  return now > closedDate;
 };
 
 function LayoutContent({ children }) {
